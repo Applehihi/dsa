@@ -1,4 +1,5 @@
 #include "Node.hpp"
+#include "Linked_List.hpp"
 #include <iostream>
 
 int main(void) {
@@ -12,4 +13,21 @@ int main(void) {
     std::cout << "Setting node_2 data to 5" << std::endl;
     node_2.setData(5);
     std::cout << "node_2 data: " << node_2.getData() << std::endl;
+    std::cout << std::endl;
+    std::cout << "Making new linked list list_1" << std::endl;
+    Linked_List<int> list_1;
+    std::cout << "Pushing int 1" << std::endl;
+    list_1.push(1);
+    list_1.begin();
+    std::cout << "list_1 begin data: " << list_1.getData() << std::endl;
+    std::cout << "list_1 append 2" << std::endl;
+    list_1.append(2);
+    list_1.traverse();
+    std::cout << "list_1 traverse data: " << list_1.getData() << std::endl;
+    std::cout << "Making new empty linked list list_2" << std::endl;
+    Linked_List<int> list_2;
+    std::cout << "Appending 3 to list_2" << std::endl;
+    list_2.append(3);
+    list_2.begin();
+    std::cout << "list_2 begin data: " << list_2.getData() << std::endl;
 }

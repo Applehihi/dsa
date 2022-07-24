@@ -1,7 +1,9 @@
 #ifndef NODEHPP
 #define NODEHPP
 
+//**********
 //Class definition
+//**********
 
 template <class T>
 class Node {
@@ -14,10 +16,12 @@ public:
     void setNext(Node* p_next);
 private:
     T m_data;
-    Node* m_next;
+    Node* m_next = nullptr;
 };
 
+//**********
 //Implementation
+//**********
 
 template <class T>
 Node<T>::Node() {
