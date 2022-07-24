@@ -1,0 +1,29 @@
+A (singly) linked list contains nodes which refer to other nodes in a chain.
+
+Each node contains some set of data as well as a reference to the next node.
+
+A linked list thus acts as a wrapper for this chain of nodes.
+
+LinkedList {
+    members:
+        Node* head;
+        Node* current;
+    methods:
+        None append(Generic);
+        None push(Generic);
+        None clear(None);
+        Generic getData(None);
+        Node* next(None);
+        Node* begin(None);
+}
+
+Node {
+    members:
+        Generic data;
+        Node* next;
+    methods:
+        Generic getData(None);
+        None setData(Generic data);
+        Node* getNext(None);
+        None setNext(Node* next);
+}
