@@ -7,23 +7,50 @@ A linked list thus acts as a wrapper for this chain of nodes.
 LinkedList {
     members:
         Node* head;
+            - Reference to the node at the start of the list
         Node* current;
+            - Reference to the current active node when traversing the list
     methods:
         None append(Generic);
+            - Appends a new element to the end of the list
         None push(Generic);
+            - Pushes a new element to the start of the list
+        None insert(Generic);
+            - Inserts a new element after the current active node
+        None remove(None);
+            - Removes the current active node and joins back the list
+        bool find(Generic);
+            - Checks whether given data exists in the list
+                Returns true if found, false otherwise
         None clear(None);
+            - Clears all elements from list and makes list empty
         Generic getData(None);
-        Node* next(None);
-        Node* begin(None);
+            - Gets the data value the current active node holds
+        None setData(Generic);
+            - Sets the data value the current active node holds to the supplied data value
+        None next(None);
+            - Sets current active node to the next node in the list
+        None begin(None);
+            - Sets current active node to the start of the list
+        Bool isEmpty(None);
+            - Checks whether the list is empty
+                Returns true if empty, false otherwise
+
 }
 
 Node {
     members:
         Generic data;
+            - The data the node holds
         Node* next;
+            - Reference to the next node
     methods:
         Generic getData(None);
+            - Gets the data value the node holds
         None setData(Generic data);
+            - Sets the data value the node holds
         Node* getNext(None);
+            - Gets a reference to the next node
         None setNext(Node* next);
+            - Sets a reference to a next node
 }
