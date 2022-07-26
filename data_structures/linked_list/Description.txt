@@ -19,6 +19,7 @@ LinkedList {
             - Inserts a new element after the current active node
         None remove(None);
             - Removes the current active node and joins back the list
+              Current active node is now the following element
         bool find(Generic);
             - Checks whether given data exists in the list
                 Returns true if found, false otherwise
