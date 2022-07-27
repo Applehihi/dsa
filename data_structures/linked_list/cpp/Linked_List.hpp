@@ -13,8 +13,10 @@ public:
     void push(T p_data);
     void insert(T p_data);
     void remove(void);
+    bool find(T p_find);
     void clear(void);
     T getData(void);
+    void setData(T p_data);
     void next(void);
     Node<T>* begin(void);
     bool isEmpty(void);
@@ -90,6 +92,18 @@ void Linked_List<T>::remove(void) {
 }
 
 template <class T>
+bool Linked_List<T>::find(T p_find) {
+    Node<T>* current = m_head;
+    while(current != nullptr) {
+        if(current->getData() == p_find) {
+            return true; //Short circuit
+        }
+        current = current->getNext();
+    }
+    return false; //Fall through
+} 
+
+template <class T>
 void Linked_List<T>::clear(void) {
     Node<T>* current = m_head;
     Node<T>* to_delete = nullptr;
@@ -104,6 +118,11 @@ void Linked_List<T>::clear(void) {
 template <class T>
 T Linked_List<T>::getData(void) {
     return m_current->getData();
+}
+
+template <class T>
+void Linked_List<T>::setData(T p_data) {
+    m_current->setData(T p_data);
 }
 
 template <class T>

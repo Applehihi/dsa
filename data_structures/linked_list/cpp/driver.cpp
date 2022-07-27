@@ -62,4 +62,5 @@ int main(void) {
     list_5.remove();
     list_5.begin();
     std::cout << "list_5 first element: " << list_5.getData() << std::endl;
+    std::cout << "1 in list_5?: " << list_5.find(1) << ", 2 in list_5?: " << list_5.find(2) << std::endl;
 }

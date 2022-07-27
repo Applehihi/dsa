@@ -55,3 +55,21 @@ Node {
         None setNext(Node* next);
             - Sets a reference to a next node
 }
+
+Potential additions:
+    Size
+        Size of the list
+    Next n
+        Move n steps through the list
+    Search
+        Looks for the query value in the list and moves the current
+        active node to the next occurence of the value in the list
+        Also returns whether value is found or not
+    Join
+        Method to allow joining 2 lists together
+    List initialisation(cpp) 
+        Ability to initialise the list with a braced list ({})
+        for convenience
+    Slot in
+        Slots in another list where the current active node is
+        

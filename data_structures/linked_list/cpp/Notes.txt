@@ -1,0 +1,11 @@
+Possibly not memory safe 
+    potential for memory leak with begin(), although can be resolved
+    if begin does not return anything
+    might have other unknown vectors
+
+Might consider method chaining
+    non-mutating methods can return a reference to this which
+    allows more methods to be chained on, making syntax more
+    convenient
+
+
