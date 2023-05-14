@@ -1,0 +1,13 @@
+For every element in the sequence, iteratively compare it with the preceding elements and swap until the comparison satisfies the given relation.
+
+Assume that the sequence is 1 indexed.
+INSERTION SORT(Seq: Sequence of n elements):
+    Given a relation R on each element to be satisfied,
+    For i = 2 to n:
+    //We start from the second element as the first element is trivially sorted.
+        For j = i to 2 descending:
+        //We end at 2 to prevent out of bounds access.
+            If R(Seq[j], Seq[j-1]) holds, go to next i.
+            Else, swap Seq[j] and Seq[j-1], and do not terminate inner loop.
+    Return Seq as sorted according to R
+

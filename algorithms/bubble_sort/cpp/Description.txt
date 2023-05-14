@@ -1,0 +1,14 @@
+Compare every adjacent element and swap them if they are not in the right order.
+
+Assume 1 indexed sequence
+BUBBLE SORT(Seq: Sequence of n elements):
+    Given a relation R on each element to be satisfied,
+    For i = 1 to n-1:
+    //Discount the topmost element because there is no higher element it needs to be compared to.
+        For j = 1 to n-i:
+        //The greatest element will bubble up to the top, so we don't need to compare them
+        //and only need to consider the unsorted elements.
+            If R(Seq[j], Seq[j+1]) holds, swap Seq[j] and Seq[j+1]
+    Return Seq as sorted according to R
+
+        
