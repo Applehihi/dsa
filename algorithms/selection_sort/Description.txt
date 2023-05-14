@@ -1,0 +1,14 @@
+Traverse through the unsorted part of the list, select the minimum element and place it at the bottom of the unsorted part.
+The minimum element then becomes part of the sorted list.
+Repeat until the entire list is sorted.
+
+Assume 1 indexed sequence
+INSERTION SORT(Seq: Sequence of n elements):
+    Given a relation R on each element to be satisfied,
+    For i = 1 to n:
+        Current_minimum_index = i
+        For j = 2 to n:
+            If R(Seq[Current_minimum_index], Seq[j]) holds, Current_minimum_index = j
+            //Note that the direction is reversed; the smaller of the two will be placed into Current_minimum
+        Swap Seq[i] and Seq[Current_minimum_index]
+    Return Seq as sorted according to R
