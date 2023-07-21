@@ -1,0 +1,15 @@
+The Euclidean algorithm is an algorithm to find the greatest common divisor (GCD) of 2 numbers.
+
+EUCLIDEAN GCD(x, y: Integers):
+    Let / be taken to be floor division and 
+    % to be the remainder operation (modulo)
+    
+    Let a, b, r be integers.
+    Set a=x, b=y so that x, y are not modified.
+    Do the following first:
+        Set r=a%b.
+        If r is 0, we are done.
+            Return b as the GCD of x and y.
+        Otherwise, 
+            Set a=b, b=r.
+            Loop once more.
